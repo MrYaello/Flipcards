@@ -1,0 +1,70 @@
+body {
+    background: linear-gradient(90deg, #8264f6, #66d390);
+}
+
+h1 {
+    width: 40vw;
+    text-align: center;
+    background: white;
+    margin: auto auto 10px;
+    border-radius: 21px;
+    font-family: 'McLaren', cursive;
+    font-size: 2.4vw;
+}
+
+.flex-container {
+    background-color: white;
+    width: 45vw;
+    height: 45vw;
+    margin: auto;
+    border-radius: 21px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+}
+
+.card {
+    width: 12.6vw;
+    height: 12.6vw;
+    margin: .8vw;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.7vw;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.front {
+    background-color:#8ed8ab;
+    color: #009c3c;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    background-color:#8264f6;
+    color: #542aff;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.flex-item:hover .card{
+    transform: rotateY(180deg);
+}
+
+.flex-item {
+    perspective: 1000px;
+}
